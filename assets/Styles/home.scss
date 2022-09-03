@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    color: $white;
+    margin: auto;
+    padding: 16px 48px;
+    text-align: center;
+    text-shadow: 0 0 20px #F9F3AA, 0 0 30px #F9F3AA, 0 0 40px #F9F3AA;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 24rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    background-image: url(../../public/img/nébuleuse_de_l-helice.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+    height: 100vh;
+
+    &__connexion,
+    &__creatAccount {
+        margin: auto;
+        height: auto;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        backdrop-filter: blur(4px);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.25) 25%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        // border: 2px solid whitesmoke;
+        border-radius: 8px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin: auto;
+            padding: 16px 0px;
+
+            legend {
+                font-size: 2.4rem;
+                color: whitesmoke;
+            }
+
+            .identification {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 1.8rem;
+                    color: $white;
+                    padding: 0px 8px;
+                }
+
+                input {
+                    height: 40px;
+                    width: 250px;
+                    border-radius: 8px;
+                    border: $white solid 2px;
+                    background-color: transparent;
+                    font-size: 1.6rem;
+                }
+
+                input[type="text"] {
+                    min-width: 250px;
+                }
+
+                input::placeholder {
+                    color: whitesmoke;
+                    padding-left: 8px;
+                    font-weight: 100;
+                    font-style: italic;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: $white;
+            }
+            .btn {
+                display: flex;
+                justify-content: center;
+                background-color: transparent;
+                width: 100%;
+                gap: 16px;
+
+                button {
+                    height: 40px;
+                    width: 200px;
+                    color: $white;
+                    font-size: 1.8rem;
+                    font-weight: 200;
+                    padding: 4px 32px;
+                    border-radius: 8px;
+                    border: none;
+                }
+
+                button[type="submit"] {
+                    background-color: rgb(85, 54, 120);
+                    filter: brightness(1.5);
+                    cursor: pointer;
+                    transition: ease-in-out 0.3s;
+                    box-shadow: 0px 0px 20px 12px rgba(170, 108, 240, 0.4);
+                    -webkit-box-shadow: 0px 0px 20px 12px rgba(170, 108, 240, 0.4);
+                }
+
+                button[type="submit"]:hover {
+                    background-color: #553678;
+                    filter: brightness(2);
+                    letter-spacing: 1px;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    box-shadow: 0px 0px 15px 10px rgba(170, 108, 240, 0.66);
+                    -webkit-box-shadow: 0px 0px 15px 10px rgba(170, 108, 240, 0.66);
+                }
+
+                button[type="reset"] {
+                    // border: solid 2px $white;
+                    background-color: transparent;
+                    box-shadow: 0px 0px 20px -1px $secondary;
+                    // ize($color: #000000, $amount: 0.7);
+                    cursor: pointer;
+                    transition: ease-in-out 0.3s;
+                }
+
+                button[type="reset"]:hover {
+                    color: $primary;
+                    letter-spacing: 1px;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    background-color: $secondary;
+                    -webkit-box-shadow: 0px 0px 20px 6px rgba(249, 243, 170, 0.4);
+                    box-shadow: 0px 0px 20px 12px $secondary;
+                }
+            }
+        }
+    }
+}

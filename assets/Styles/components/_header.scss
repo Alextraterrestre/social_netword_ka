@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+
+    &__container {
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            // flex: 1;
+            margin: auto;
+
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        &__searchBox {
+            // flex: 2;
+            background-color: $secondary;
+            height: 4vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 32px;
+            border-radius: 8px;
+            width: 60%;
+
+            .search {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        &__login {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .connexion {
+                height: 75px;
+                width: 75px;
+            }
+
+            p {
+                color: $white;
+            }
+        }
+    }
+
+    &__navbar {
+        display: flex;
+        height: 5vh;
+
+        ul {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                list-style: none;
+                display: flex;
+
+                .link {
+                    font-size: 28px;
+                    color: $white;
+                    text-decoration: none;
+                    text-align: center;
+                    margin: 8auto;
+                }
+            }
+        }
+    }
+}
